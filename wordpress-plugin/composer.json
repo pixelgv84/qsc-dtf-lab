@@ -1,0 +1,15 @@
+{
+  "name": "qsc/dtf-lab",
+  "description": "Professional DTF Image Preparation Studio for WordPress",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "autoload": {
+    "psr-4": {
+      "QSC\\DTFLab\\": "includes/"
+    }
+  },
+  "require": {},
+  "config": {
+    "sort-packages": true
+  }
+}
