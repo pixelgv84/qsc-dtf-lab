@@ -22,17 +22,4 @@ define('QSC_DTF_PLUGIN_FILE', __FILE__);
 define('QSC_DTF_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('QSC_DTF_PLUGIN_URL', plugin_dir_url(__FILE__));
 
-$autoload = QSC_DTF_PLUGIN_PATH . 'vendor/autoload.php';
-
-if (!file_exists($autoload)) {
-    add_action('admin_notices', function (): void {
-        echo '<div class="notice notice-error"><p><strong>QSC DTF Lab:</strong> Ejecuta <code>composer install</code> antes de activar el plugin.</p></div>';
-    });
-
-    return;
-}
-
-require_once $autoload;
-
-$app = new QSC\DTFLab\Core\Application();
-$app->boot();
+require_once QSC_DTF_PLUGIN_PATH . 'includes/bootstrap.php';
