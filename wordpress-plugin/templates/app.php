@@ -1,1 +1,0 @@
-<div id="qsc-dtf-root"></div>
